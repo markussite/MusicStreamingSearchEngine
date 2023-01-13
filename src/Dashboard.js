@@ -1,4 +1,3 @@
-import logo from './logo.svg';
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import {Container, InputGroup, FormControl, Button, Row, Cards, Card} from 'react-bootstrap';
@@ -7,7 +6,7 @@ import {useState, useEffect} from 'react';
 const CLIENT_ID = process.env.REACT_APP_SPOTIFY_API_ID; // Your client id
 const CLIENT_SECRET = process.env.REACT_APP_SPOTIFY_CLIENT_SECRET; // Your secret
 
-function App() {
+export default function Dashboard({ code }) {
   const [searchInput, setSearchInput] = useState("");
   const [accessToken, setAccessToken] = useState("");
   const [albums, setAlbum] = useState([]);
@@ -91,5 +90,3 @@ function App() {
     </div>
   );
 }
-
-export default App;
