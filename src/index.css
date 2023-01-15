@@ -15,3 +15,11 @@ code {
 img {
   padding-right: 20px;
 }
+
+.parent{
+  flex: 5;
+}
+
+.child{
+  flex: 3;
+}
