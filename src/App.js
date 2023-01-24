@@ -27,7 +27,7 @@ function App() {
     {/* This route is for about component 
     with exact path "/about", in component 
     props we passes the imported component*/}
-    <Route path="/search" element={<SearchResult />} />
+    <Route path="/search/:id" element={<SearchResult />} />
     <Route
         path="*"
         element={<Navigate to="/" replace />}
