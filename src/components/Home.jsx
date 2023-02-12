@@ -7,9 +7,9 @@ import '../index.css';
 const Home = () => {
     const [searchInput, setSearchInput] = useState("");
     const navigate = useNavigate();
-    
+
     const handleClick = (id) => {
-      navigate(`/search/${searchInput}`, {
+      navigate(`/search/${id}`, {
       });
     }
 
@@ -20,12 +20,12 @@ const Home = () => {
             <FormControl
               placeholder='Search for Single/Album/Artist'
               type='input'
-              onChange={event => setSearchInput(event.target.value)}
               onKeyDown={event => {
                 if (event.key === 'Enter'){
                   handleClick(searchInput);
                 }
               }}
+              onChange={event => setSearchInput(event.target.value)}
             />
             <Button onClick={handleClick}>Search</Button>
           </InputGroup>
