@@ -11,7 +11,6 @@ import {
   
 // import Home component
 import Home from "./components/Home";
-import SearchResult from "./components/SearchResult";
 
 function App() {
   return (
@@ -24,10 +23,6 @@ function App() {
     we passes the imported component*/}
     <Route exact path="/" element={<Home />} />
     
-    {/* This route is for about component 
-    with exact path "/about", in component 
-    props we passes the imported component*/}
-    <Route path="/search/:id" element={<SearchResult />} />
     <Route
         path="*"
         element={<Navigate to="/" replace />}

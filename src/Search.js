@@ -23,7 +23,7 @@ export default async function Search(params) {
     }
     fetch('https://accounts.spotify.com/api/token', authParameters)
       .then(result => result.json())
-      .then(data => setAccessToken(data.access_token)) //errorHandling for fetch
+      .then(data => setAccessToken(data.access_token)).catch(error => console.log(error));
     },[])
 
     const handleError = response => {

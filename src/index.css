@@ -13,7 +13,9 @@ code {
 }
 
 img {
+  float:left;
   padding-right: 20px;
+  width:10rem;
 }
 
 section {
@@ -33,11 +35,12 @@ section.bottom {
   padding-top: .5rem;
 }
 
-
-
-
 @media only screen and (max-width: 620px) {
   section.top {
       flex-direction: column;
   }
+}
+
+Card{
+  length: flex;
 }
